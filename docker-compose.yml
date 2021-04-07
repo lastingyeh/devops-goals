@@ -22,7 +22,7 @@ services:
     depends_on: 
       - db
     volumes: 
-      - $PWD/backend:/app
+      - ./backend:/app
       - logs:/app/logs
       - /app/node_modules
     environment: 
@@ -38,13 +38,13 @@ services:
     depends_on: 
       - backend
     volumes: 
-      - $PWD/frontend:/app
-      - /app/node_modules
+      - ./frontend/src:/app/src
     environment: 
       - CHOKIDAR_USEPOLLING=true
     ports: 
       - 3000:3000
     stdin_open: true
+    tty: true
 networks: 
   goals-net:
 volumes: 

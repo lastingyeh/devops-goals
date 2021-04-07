@@ -68,7 +68,6 @@
 
       $ docker run --name mongodb --rm -v data:/data/db -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=user -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
 
-
 # docker-compose
 
 - up & build
